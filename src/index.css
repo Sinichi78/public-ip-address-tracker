@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --clr-very-dark-gray: hsl(0, 0%, 17%);
+  --clr-dark-gray: hsl(0, 0%, 59%);
+
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+header {
+  background: no-repeat url('/pattern-bg-mobile.png');
+  background-size: cover;
+  
+}
+
+
+
+#ipInput {
+  padding: 0.6rem 1rem;
+  flex: 15;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  font-size: 0.9rem;
+}
+#ipInput:focus {
+  outline: none;
+  border: none;
+}
+#submitInput {
+  background-color: var(--clr-very-dark-gray);
+  flex: 2;
+  border-radius: 0px 10px 10px 0px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#submitInput img {
+  max-width: 35%;
+}
+
+.results {
+  margin-bottom: -50%;
+  box-shadow: 0 20px 60px -30px rgba(0, 0, 0, 0.444);
+  z-index: 2;
+  width: 100%;
+}
+.results h3 {
+  color: var(--clr-dark-gray);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.results h2 {
+  color: var(--clr-very-dark-gray);
+  font-size: 1.2rem;
+}
+
+@media (width > 681px) {
+  header {
+    background: no-repeat url('/pattern-bg-desktop.png');
+    background-size: cover;
+  }
+  form {
+    max-width: 50%;
+  }
+  .results {
+    /* margin-bottom: 0; */
+    margin-bottom: -7%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 85%;
+    text-align: left;
+  }
+}
+
+.marker {
+  background-image: url('/icon-location.svg');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
